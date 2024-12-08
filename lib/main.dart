@@ -16,76 +16,53 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<String> sound = [
-    '1.mp3',
-    '2.mp3',
-    '3.mp3',
-    '4.mp3',
-    '5.mp3',
-    '6.mp3',
-    '7.mp3',
-    '8.mp3',
-    '9.mp3',
-    '10.mp3',
-    '12.mp3',
-    '13.mp3',
-    '14.mp3',
-    '15.mp3',
-    '16.mp3',
-    '17.mp3',
-    '18.mp3',
-    '19.mp3',
-    '20.wav',
-    '21.mp3',
-    '22.wav',
-    '23.wav',
-    '24.wav',
-    '25.wav',
-    '26.wav'
-  ];
-  int soundPosition = 0;
-  final player = AudioPlayer();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
+      debugShowCheckedModeBanner: false,
+      title: "Launch Pad App",
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.black,
+            title: Text("Launchpad",
+              style: GoogleFonts.orbitron(color: Colors.white),),
+          ),
           backgroundColor: Colors.black,
-          title: Text("Launchpad",
-            style: GoogleFonts.orbitron(color: Colors.white),),
+          body:Center(
+            child: Wrap(
+              spacing: 5,
+              runSpacing: 5,
+              children: [
+                pad(Color(0xffADCBFC), Color(0xff067CCB), '1.mp3'),
+                pad(Color(0xffff2525), Color(0xffc40050), '2.mp3'),
+                pad(Color(0xffE247FC), Color(0xffA23AB7), '3.mp3'),
+                pad(Color(0xffADCBFC), Color(0xff067CCB), '4.mp3'),
+                pad(Color(0xffff2525), Color(0xffc40050), '5.mp3'),
+                pad(Color(0xffE247FC), Color(0xffA23AB7), '6.mp3'),
+                pad(Color(0xffADCBFC), Color(0xff067CCB), '7.mp3'),
+                pad(Color(0xffff2525), Color(0xffc40050), '8.mp3'),
+                pad(Color(0xffE247FC), Color(0xffA23AB7), '9.mp3'),
+                pad(Color(0xffADCBFC), Color(0xff067CCB), '10.mp3'),
+                pad(Color(0xffff2525), Color(0xffc40050), '11.mp3'),
+                pad(Color(0xffE247FC), Color(0xffA23AB7), '12.mp3'),
+                pad(Color(0xffADCBFC), Color(0xff067CCB), '13.mp3'),
+                pad(Color(0xffff2525), Color(0xffc40050), '14.mp3'),
+                pad(Color(0xffE247FC), Color(0xffA23AB7), '15.mp3'),
+                pad(Color(0xffADCBFC), Color(0xff067CCB), '16.mp3'),
+                pad(Color(0xffff2525), Color(0xffc40050), '17.mp3'),
+                pad(Color(0xffE247FC), Color(0xffA23AB7), '18.mp3'),
+                pad(Color(0xffADCBFC), Color(0xff067CCB), '19.mp3'),
+                pad(Color(0xffff2525), Color(0xffc40050), '20.wav'),
+                pad(Color(0xffE247FC), Color(0xffA23AB7), '21.mp3'),
+                pad(Color(0xffADCBFC), Color(0xff067CCB), '22.wav'),
+                pad(Color(0xffff2525), Color(0xffc40050), '23.wav'),
+                pad(Color(0xffE247FC), Color(0xffA23AB7), '24.wav'),
+              ],
+            ),
+          )
+        
         ),
-        backgroundColor: Colors.black,
-        body:Wrap(
-          spacing: 5,
-          runSpacing: 5,
-          children: [
-            pad(Color(0xffADCBFC), Color(0xff067CCB), '1.mp3'),
-            pad(Color(0xffff2525), Color(0xffc40050), '2.mp3'),
-            pad(Color(0xffE247FC), Color(0xffA23AB7), '3.mp3'),
-            pad(Color(0xffADCBFC), Color(0xff067CCB), '4.mp3'),
-            pad(Color(0xffff2525), Color(0xffc40050), '5.mp3'),
-            pad(Color(0xffE247FC), Color(0xffA23AB7), '6.mp3'),
-            pad(Color(0xffADCBFC), Color(0xff067CCB), '7.mp3'),
-            pad(Color(0xffff2525), Color(0xffc40050), '8.mp3'),
-            pad(Color(0xffE247FC), Color(0xffA23AB7), '9.mp3'),
-            pad(Color(0xffADCBFC), Color(0xff067CCB), '10.mp3'),
-            pad(Color(0xffff2525), Color(0xffc40050), '11.mp3'),
-            pad(Color(0xffE247FC), Color(0xffA23AB7), '12.mp3'),
-            pad(Color(0xffADCBFC), Color(0xff067CCB), '13.mp3'),
-            pad(Color(0xffff2525), Color(0xffc40050), '14.mp3'),
-            pad(Color(0xffE247FC), Color(0xffA23AB7), '15.mp3'),
-            pad(Color(0xffADCBFC), Color(0xff067CCB), '16.mp3'),
-            pad(Color(0xffff2525), Color(0xffc40050), '17.mp3'),
-            pad(Color(0xffE247FC), Color(0xffA23AB7), '18.mp3'),
-            pad(Color(0xffADCBFC), Color(0xff067CCB), '19.mp3'),
-            pad(Color(0xffff2525), Color(0xffc40050), '20.wav'),
-            pad(Color(0xffE247FC), Color(0xffA23AB7), '21.mp3'),
-            pad(Color(0xffADCBFC), Color(0xff067CCB), '22.wav'),
-            pad(Color(0xffff2525), Color(0xffc40050), '23.wav'),
-            pad(Color(0xffE247FC), Color(0xffA23AB7), '24.wav'),
-          ],
-        )
-
       ),
     );
   }
